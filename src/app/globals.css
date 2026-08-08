@@ -480,6 +480,77 @@ footer .f-logo span{font-family:var(--tib);color:var(--marigold);font-size:14px;
   border-radius:18px;padding:30px 36px;font-size:16.5px;text-align:center;
 }
 .payout-context b{color:var(--marigold)}
+/* ---- lesson recap (shared) ---- */
+.recap-card,.rate-card,.priority-card{
+  max-width:640px;margin:24px auto 0;background:#fbf6ea;
+  border:1px solid var(--line);border-radius:var(--r);
+  padding:28px;box-shadow:var(--shadow);
+}
+.recap-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.recap-card h3,.rate-card h3,.priority-card h3{font-family:var(--disp);font-size:21px;font-weight:600}
+.shared-tag{
+  font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;
+  color:var(--turquoise);background:rgba(47,143,138,.1);
+  border:1px solid rgba(47,143,138,.3);border-radius:20px;padding:5px 12px;
+}
+.recap-sub,.rate-sub{color:var(--text-soft);font-size:14px;margin:8px 0 18px}
+.covered-label{
+  font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  font-weight:700;color:var(--text-soft);
+}
+.covered ul{list-style:none;margin:10px 0 22px;display:flex;flex-direction:column;gap:10px}
+.covered li{
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;
+  padding:10px 14px;background:var(--paper);border:1px solid var(--line);border-radius:8px;
+}
+.covered .tib-line{font-family:var(--tib);font-size:17px;color:var(--ink)}
+.covered .rom-line{font-size:13px;color:var(--oxblood);font-weight:600}
+.covered .eng-line{font-size:13px;color:var(--text-soft);margin-left:auto}
+.notes-label{display:block;font-size:13px;font-weight:600;color:var(--text);margin-bottom:8px}
+.recap-notes,.review-box{
+  width:100%;font-family:var(--body);font-size:14.5px;color:var(--text);
+  background:var(--paper);border:1.5px solid var(--line);border-radius:8px;
+  padding:12px 14px;resize:vertical;transition:border-color .12s;
+}
+.recap-notes:focus,.review-box:focus{outline:none;border-color:var(--oxblood)}
+.recap-actions{margin-top:14px;display:flex;justify-content:flex-end}
+
+/* ---- rate your tutor ---- */
+.rate-card{text-align:center}
+.rate-card .rate-sub{margin-bottom:14px}
+.stars{display:flex;gap:6px;justify-content:center;margin-bottom:16px}
+.star{
+  font-size:34px;line-height:1;color:var(--line);background:none;border:none;
+  cursor:pointer;transition:color .1s,transform .1s;padding:0 2px;
+}
+.star.on{color:var(--marigold)}
+.stars:not(.static) .star:hover{transform:scale(1.15)}
+.stars.static{margin:10px 0 6px}
+.stars.static .star{cursor:default;font-size:26px}
+.review-box{margin-bottom:16px;text-align:left}
+.rate-quote{font-style:italic;color:var(--text-soft);margin:6px 0 14px}
+.rate-done h3{margin-bottom:6px}
+
+/* ---- priority rebooking ---- */
+.priority-card{display:flex;align-items:center;gap:20px;transition:border-color .15s}
+.priority-card.active{border-color:var(--turquoise);box-shadow:0 0 0 1px var(--turquoise),var(--shadow)}
+.priority-text{flex:1}
+.priority-text p{color:var(--text-soft);font-size:14px;margin-top:6px}
+.toggle{
+  flex-shrink:0;width:56px;height:32px;border-radius:20px;border:none;cursor:pointer;
+  background:var(--line);position:relative;transition:background .18s;padding:0;
+}
+.toggle.on{background:var(--turquoise)}
+.toggle .knob{
+  position:absolute;top:3px;left:3px;width:26px;height:26px;border-radius:50%;
+  background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:transform .18s;
+}
+.toggle.on .knob{transform:translateX(24px)}
+.priority-note{
+  max-width:640px;margin:12px auto 0;text-align:center;
+  color:var(--turquoise);font-size:14px;font-weight:600;
+}
+
 .roadmap{margin-top:56px;text-align:center}
 .roadmap h3{font-family:var(--disp);font-size:20px;margin-bottom:18px}
 .roadmap .langs{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
