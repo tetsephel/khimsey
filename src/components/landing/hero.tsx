@@ -13,6 +13,13 @@ export function Hero() {
           </Link>
           <div className="links">
             <Link
+              className="btn btn-quiet"
+              style={{ color: "rgba(243,236,221,.7)" }}
+              href="/profile"
+            >
+              My profile
+            </Link>
+            <Link
               className="btn btn-marigold"
               style={{ padding: "11px 22px", fontSize: 14 }}
               href="/start"

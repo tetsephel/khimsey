@@ -562,6 +562,60 @@ footer .f-logo span{font-family:var(--tib);color:var(--marigold);font-size:14px;
 .roadmap .langs span b.dev{font-family:Georgia,serif}
 .payout-actions{display:flex;gap:14px;justify-content:center;margin:48px 0 80px;flex-wrap:wrap}
 
+/* ---------- FORM FIELDS ---------- */
+.field{margin-bottom:20px}
+.field label{
+  display:block;font-size:12.5px;font-weight:700;letter-spacing:.04em;
+  color:var(--text-soft);text-transform:uppercase;margin-bottom:8px;
+}
+.field input[type="text"],
+.field textarea,
+.field select{
+  width:100%;border:1.5px solid var(--line);background:#fbf6ea;border-radius:8px;
+  padding:13px 16px;font-family:var(--body);font-size:15px;color:var(--text);
+  transition:border-color .12s;
+}
+.field input[type="text"]:focus,
+.field textarea:focus,
+.field select:focus{border-color:var(--oxblood);outline:none}
+.field textarea{resize:vertical;min-height:90px}
+.field .hint-text{font-size:12.5px;color:var(--text-soft);margin-top:6px}
+
+.profile-card{
+  background:#fbf6ea;border:1px solid var(--line);border-radius:var(--r);
+  padding:32px;box-shadow:var(--shadow);position:relative;
+}
+.profile-card::before,.profile-card::after{
+  content:"";position:absolute;top:16px;bottom:16px;width:0;
+  border-left:1.5px solid rgba(200,68,45,.4);
+}
+.profile-card::before{left:16px}
+.profile-card::after{right:16px}
+.profile-head{display:flex;align-items:center;gap:18px;margin-bottom:28px}
+.profile-avatar{
+  width:64px;height:64px;border-radius:50%;flex-shrink:0;display:grid;place-items:center;
+  font-family:var(--tib);font-size:26px;color:#fff;
+  background:linear-gradient(135deg,var(--oxblood),var(--marigold));
+}
+.profile-head h2{font-family:var(--disp);font-size:24px;font-weight:600}
+.profile-head p{font-size:13.5px;color:var(--text-soft);margin-top:2px}
+.profile-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.profile-stats .node{
+  text-align:center;background:var(--paper);border:1px solid var(--line);
+  border-radius:10px;padding:16px 10px;
+}
+.profile-stats .node b{font-family:var(--disp);font-size:24px;display:block}
+.profile-stats .node span{font-size:11.5px;color:var(--text-soft);display:block;margin-top:4px}
+.save-note{
+  display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--turquoise);
+  font-weight:600;opacity:0;transition:opacity .3s;
+}
+.save-note.show{opacity:1}
+
+@media (max-width:900px){
+  .profile-stats{grid-template-columns:1fr}
+}
+
 /* ---------- RESPONSIVE + MOTION ---------- */
 @media (max-width:900px){
   .hero-inner{grid-template-columns:1fr;padding-bottom:120px}
