@@ -40,9 +40,14 @@ export function Stepper() {
           <span className="mark">Khimzey</span>
           <span className="mark-tib">བོད་སྐད་</span>
         </Link>
-        <Link href="/" className="home-btn">
-          ⌂ Home
-        </Link>
+        <div style={{ display: "flex", gap: 10 }}>
+          <Link href="/profile" className="home-btn">
+            My profile
+          </Link>
+          <Link href="/" className="home-btn">
+            ⌂ Home
+          </Link>
+        </div>
       </div>
       <div className="garland" aria-hidden="true">
         <svg viewBox="0 0 1100 64" preserveAspectRatio="none">
